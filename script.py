@@ -11,8 +11,8 @@ from sklearn.neighbors import KNeighborsClassifier
 
         ##Getting data##
 
-train = pd.read_csv('./train.csv')
-test = pd.read_csv('./test.csv')
+train = pd.read_csv('./Dataset/train.csv')
+test = pd.read_csv('./Dataset/test.csv')
 
 combine = [train,test]
 complete=pd.concat(combine)
@@ -165,5 +165,5 @@ accuracy
 
 final_prediction=pd.DataFrame({'PassengerId':test['PassengerId'],'Survived':Y_pred})
     
-final_prediction.to_csv('./titanic_survival.csv', index=False)
+final_prediction.to_csv('./Dataset/titanic_survival.csv', index=False)
 plt.show()
